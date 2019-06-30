@@ -45,4 +45,5 @@ The prediction is distorted and there's a significant portion of the track with 
   * Mac: same deal as make - [install Xcode command line tools](https://developer.apple.com/xcode/features/)
   * Windows: recommend using [MinGW](http://www.mingw.org/)
   
-#### source https://github.com/nicochristie/Udacity_CarND_P4.git
+#### Sources
+Thanks to https://www.onlineconverter.com/mov-to-gif
