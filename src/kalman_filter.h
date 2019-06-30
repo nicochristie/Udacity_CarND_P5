@@ -46,6 +46,13 @@ class KalmanFilter {
    */
   void UpdateEKF(const Eigen::VectorXd &z);
 
+  /**
+   * Updates the x_ and P_ matrixes given an y value
+   * Since the source of the measure (sensor) is
+   * irrelevant we can use the same update method
+   */
+  void Update_x_and_P(const Eigen::VectorXd &y);
+  
   // state vector
   Eigen::VectorXd x_;
 
