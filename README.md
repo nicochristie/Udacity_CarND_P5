@@ -3,8 +3,10 @@ Self-Driving Car Engineer Nanodegree Program
 
 ## Runs
 ### Dataset 1
+Final RMSE values: (x, y, vx, vy): 0.0966, 0.0852, 0.4104, 0.4599
 ![Dataset 1](samples/Dataset1.gif)
 ### Dataset 2
+Final RMSE values: (x, y, vx, vy): 0,0732, 0.0963, 0.3812, 0.4778
 ![Dataset 2](samples/Dataset2.gif)
 
 #### Effect of not normalising polar angles in range [-pi, pi]:
