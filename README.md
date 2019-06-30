@@ -7,8 +7,8 @@ Self-Driving Car Engineer Nanodegree Program
 ### Dataset 2
 ![Dataset 2](samples/Dataset2.gif)
 
-There seems to be a source of error in the sampled data around 2/3s of the track for Dataset 1 that ruins the RMSE values. You can see how these values tend to decrease from a relative high value at start, then jumps up around 2/3s. Likely a non filtered zero-value that resets my state matrix? Why is it only affecting Y-coordinates?
-
+#### Effect of not normalising polar angles in range [-pi, pi]:
+The prediction is distorted and there's a significant portion of the track with great prediction error.
 ![Pre noise](samples/Dataset1Noise1.png)![Post noise](samples/Dataset1Noise2.png)
 
 ## Additional info
