@@ -2,7 +2,10 @@
 Self-Driving Car Engineer Nanodegree Program
 
 ## Runs
-![Dataset 1](samples/Dataset1.gif)![Dataset 2](samples/Dataset2.gif)
+### Dataset 1
+![Dataset 1](samples/Dataset1.gif)
+### Dataset 2
+![Dataset 2](samples/Dataset2.gif)
 
 There seems to be a source of error in the sampled data around 2/3s of the track for Dataset 1 that ruins the RMSE values. You can see how these values tend to decrease from a relative high value at start, then jump up around 2/3s.
 
