@@ -114,8 +114,10 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
     }
 
     // Fix 'very small numbers'
-    if (fabs(ekf_.x_(0)) < 0.0001) ekf_.x_(0) = 0.0001;
-    if (fabs(ekf_.x_(1)) < 0.0001) ekf_.x_(1) = 0.0001;
+    if ((fabs(ekf_.x_(0)) < 0.0001) && (fabs(ekf_.x_(1)) < 0.0001)) {
+      ekf_.x_(0) = 0.0001;
+      ekf_.x_(1) = 0.0001; 
+    }
 
     // update timestamp
     previous_timestamp_ = measurement_pack.timestamp_ ;
