@@ -46,4 +46,3 @@ There seems to be a source of error in the sampled data around 2/3s of the track
   * Windows: recommend using [MinGW](http://www.mingw.org/)
   
 #### source https://github.com/nicochristie/Udacity_CarND_P4.git
-nicolas.christie@gmail.com
