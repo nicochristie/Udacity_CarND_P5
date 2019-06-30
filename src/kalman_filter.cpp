@@ -59,17 +59,22 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
 
   // polar values
   double rho = sqrt(px*px + py*py);
-  double theta = atan2(py, px);
+  double phi = atan2(py, px);
   double rho_dot = (px*vx + py*vy) / rho;
-  
+
   // TODO: zero checks
   if (fabs(rho) < 0.0001) rho_dot = 0;
   
   // h(x') 
   VectorXd h = VectorXd(3);
-  h << rho, theta, rho_dot; // (equation 53)
+  h << rho, phi, rho_dot; // (equation 53)
   
   VectorXd y = z - h;
+
+  // Normalize y(1) to [-pi, pi]
+  while (y(1) >  M_PI) y(1) -= 2.0 * M_PI;
+  while (y(1) < -M_PI) y(1) += 2.0 * M_PI;
+  
   Update_x_and_P(y);
 }
 

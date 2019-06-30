@@ -89,19 +89,19 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
       //         and initialize state.
       
       // get raw values
-      double ro = measurement_pack.raw_measurements_(0);
+      double rho = measurement_pack.raw_measurements_(0);
       double phi = measurement_pack.raw_measurements_(1);
-      double ro_dot = measurement_pack.raw_measurements_(2);
+      double rho_dot = measurement_pack.raw_measurements_(2);
       
       // Normalize phi to [-pi, pi]
       while (phi > M_PI)  phi -= 2.0 * M_PI;
       while (phi < -M_PI) phi += 2.0 * M_PI;
 
       // transform from polar into cartesian coordinates
-      double x = ro * cos(phi);
-      double y = ro * sin(phi);      
-      double vx = ro_dot * cos(phi);
-      double vy = ro_dot * sin(phi);
+      double x = rho * cos(phi);
+      double y = rho * sin(phi);      
+      double vx = rho_dot * cos(phi);
+      double vy = rho_dot * sin(phi);
 
       ekf_.x_ << x, y, vx , vy;
     }
